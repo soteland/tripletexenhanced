@@ -1,0 +1,34 @@
+@media screen and (min-width: 1800px) {
+  a.mdl-layout__tab[data-jquiid]{
+      display: inline-block!important;
+  }
+  a#tab-bar-more-button {
+      display: none!important;
+  }
+}
+
+.mdl-layout__tab {
+  padding: 0 10px;
+  margin-top: -2px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+.mdl-layout__tab[data-jquiid="ui-id-19"] {    
+    /*border-right: 2px solid white;*/
+}
+
+.mdl-layout__tab:hover {
+  color: black!important;
+}
+
+.tmdl-layout__action-bar .mdl-button--icon {
+    border-radius: 0;
+    font-size: 24px;
+    height: 36px;
+    width: 252px;
+}
+
+.tmdl-layout__action-bar .mdl-button--icon .material-icons {    
+  font-size: 30px;
+  left: 116px
+}
