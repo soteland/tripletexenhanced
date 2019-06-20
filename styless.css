@@ -1,3 +1,5 @@
+/*https://github.com/soteland/tripletexenhanced*/
+
 @media screen and (min-width: 1800px) {
   a.mdl-layout__tab[data-jquiid]{
       display: inline-block!important;
@@ -13,12 +15,13 @@
     border-left: 2px solid white;
     border-top: 2px solid white;
 }
-.mdl-layout__tab[data-jquiid="ui-id-19"] {    
+.mdl-layout__tab[data-jquiid="ui-id-19"] {
     /*border-right: 2px solid white;*/
 }
 
 .mdl-layout__tab:hover {
   color: black!important;
+  background-color: #efefef!important;
 }
 
 .tmdl-layout__action-bar .mdl-button--icon {
