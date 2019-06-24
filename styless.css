@@ -1,29 +1,4 @@
 /*https://github.com/soteland/tripletexenhanced*/
-
-@media screen and (min-width: 1800px) {
-  a.mdl-layout__tab[data-jquiid]{
-      display: inline-block!important;
-  }
-  a#tab-bar-more-button {
-      display: none!important;
-  }
-}
-
-.mdl-layout__tab {
-  padding: 0 10px;
-  margin-top: -2px;
-    border-left: 2px solid white;
-    border-top: 2px solid white;
-}
-.mdl-layout__tab[data-jquiid="ui-id-19"] {
-    /*border-right: 2px solid white;*/
-}
-
-.mdl-layout__tab:hover {
-  color: black!important;
-  background-color: #efefef!important;
-}
-
 .tmdl-layout__action-bar .mdl-button--icon {
     border-radius: 0;
     font-size: 24px;
@@ -31,7 +6,40 @@
     width: 252px;
 }
 
-.tmdl-layout__action-bar .mdl-button--icon .material-icons {    
-  font-size: 30px;
-  left: 116px
+.tmdl-layout__action-bar .mdl-button--icon .material-icons {
+    font-size: 30px;
+    left: 116px
+}
+
+@media screen and (min-width: 1070px) {
+    .insetOpen .tmdl-layout__fake-tab-bar {
+        border-left: 1px solid white;
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+
+    a.mdl-layout__tab.mdl-button.mdl-js-button.mdl-js-ripple-effect.is-active {
+        height: 31px;
+    }
+
+    .mdl-layout__tab {
+        padding: 0 7px;
+        margin-top: -px;
+        border-left: 0px solid white;
+        border-right: 1px solid white;
+        border-top: 1px solid white;
+    }
+
+    .mdl-layout__tab:hover {
+        color: black !important;
+        background-color: #efefef !important;
+    }
+
+    a.mdl-layout__tab[data-jquiid] {
+        display: inline-block !important;
+    }
+
+    a#tab-bar-more-button {
+        display: none !important;
+    }
 }
