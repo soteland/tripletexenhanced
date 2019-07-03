@@ -69,24 +69,4 @@
             }
         }, 500);
     }
-    /*
-    setTimeout(function () {
-        window.onhashchange = function() {
-            var dfaLink = document.getElementById('dfalink');
-            var numberPattern2 = /\d+/g;
-            var customerNameNumber2 = document.getElementById('tt-mdl-layout-title');
-            var customerNumber2 = customerNameNumber2.innerHTML.match( numberPattern2 );
-            dfaLink.href = "https://app.digifix.no/customers/" + customerNumber2;
-        }
-    }, 500);
-
-    jQuery(window).bind('hashchange', function() {
-        console.log("chage");
-        var dfaLink = document.getElementById('dfalink');
-        var numberPattern2 = /\d+/g;
-        var customerNameNumber2 = document.getElementById('tt-mdl-layout-title');
-        var customerNumber2 = customerNameNumber2.innerHTML.match( numberPattern2 );
-        dfaLink.href = "https://app.digifix.no/customers/" + customerNumber2;
-    });
-    */
 })();
