@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Tripletex enhancements
-// @namespace    https://www.digifix.no/
+// @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Små forbedringer til Tripletex, tilpasset DigiFix AS
+// @description  try to take over the world!
 // @author       You
 // @match        https://tripletex.no/execute/*
 // @grant        none
