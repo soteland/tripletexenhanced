@@ -18,10 +18,6 @@
     width: 80px;
 }
 
-/* Indicate cells with comment in timesheet */
-.table-cell--number-three-digits [data-tooltip] {
-  background-color: #ffaaaa; }
-
 @media screen and (min-width: 1070px) {
     .insetOpen .tmdl-layout__fake-tab-bar {
         border-left: 1px solid white;
@@ -54,3 +50,11 @@
         display: none !important;
     }
 }
+.tlx-space-hours .table-cell--number-three-digits [data-tooltip]:before {
+  content: "💬";
+}
+
+.tlx-space-hours .table-cell--number-three-digits [data-tooltip] {
+  font-weight: bold;
+  /*background-color: #ffaaaa;*/
+/*border-bottom: 1px solid red;}*/
