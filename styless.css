@@ -52,6 +52,7 @@
 }
 .tlx-space-hours .table-cell--number-three-digits [data-tooltip]:before {
   content: "💬";
+  font-size: 0.8em;
 }
 
 .tlx-space-hours .table-cell--number-three-digits [data-tooltip] {
