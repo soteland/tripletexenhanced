@@ -18,6 +18,12 @@
     width: 80px;
 }
 
+.tabzum.tz-dialog {
+    left: 1000px!important;
+    top: 88px!important;
+    right: auto!important;
+}
+
 @media screen and (min-width: 1070px) {
     .insetOpen .tmdl-layout__fake-tab-bar {
         border-left: 1px solid white;
@@ -61,6 +67,9 @@
 /*border-bottom: 1px solid red;}*/
 
 }
+/*.mdl-cell--12-col {
+    width: calc(100vw - 290px);
+}*/
 @media screen and (min-width: 1199px) {
   #accountCurrentBookCustomer table.contentTable td {
     border-top: 1px solid rgba(225, 225, 225, 1);
@@ -76,7 +85,7 @@
   }
 
   #accountCurrentBookCustomer .tabzum td.table-cell--text-small {
-    background-color: red;
+    background-color: #ff8080;
     margin: 0;
     padding: 0;
   }
