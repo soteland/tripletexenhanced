@@ -14,3 +14,6 @@ Her er noen designendringer som gjør Tripletex litt enklere å bruke. Du kan le
 Javascript-biten er tilpasset mitt firma, men link til kunder kan antagelig tilpasses ditt firma.
 
 Flere ønsker som enkelt, eller mer avansert, kan løses med CSS? Send meg et tips da vel :)
+
+## Lisens
+Bruk koden så mye du vil. Modifiser koden så mye du vil. Publiser koden der du ønsker. Treffes vi en dag kan du kjøpe en øl til meg, om du vil :)
