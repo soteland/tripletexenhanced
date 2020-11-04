@@ -24,6 +24,10 @@
     right: auto!important;
 }
 
+.tlx-textfield__input.notInForm.tlxSelect.tlxSelectProduct.tlxEditAuth.tlx-input-opener {
+  width: 300px;
+}
+
 .tooltipList a.linkMessage {
     display: inline-block;
     border: 1px solid #334ce0;
