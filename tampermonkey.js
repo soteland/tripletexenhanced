@@ -10,6 +10,10 @@
 
 (function() {
     'use strict';
+    const cssButton = "color: white; font-size: 14px;     text-transform: uppercase; font-family: roboto; padding: 5px 10px 4px; background-color: var(--tlx-theme-button-color); border-radius: 3px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); display: inline-block; margin-right: 20px;";
+    const cssHideButton = "display: none;"
+    const customerNoPattern = /\((\d{5})\)/g;
+    const buttonText = " Åpne kunde i DFA ";
     /* These are the modifications: */
     history.pushState = ( f => function pushState(){
         var ret = f.apply(this, arguments);
@@ -36,36 +40,78 @@
     })
 
     setTimeout(function () {
-        var numberPattern = /\d{5}/g;
-        var customerNameNumber = document.getElementById('tt-mdl-layout-title');
-        var customerNumber = customerNameNumber.innerHTML.match( numberPattern );
-        var newLink = document.createElement( 'a' );
-        var css = "color: white; font-size: 14px;     text-transform: uppercase; font-family: roboto; padding: 5px 10px 4px; background-color: var(--tlx-theme-button-color); border-radius: 3px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); display: inline-block; margin-right: 20px;";
-        var buttonText = " Åpne kunde i DFA ";
-        if(customerNumber==null) {
+
+        /*
+
+        const string = "Eske AS (10035)";
+        const regexp = /\((\d{5})\)/g;
+        const matches = string.matchAll(customerNoPattern);
+
+        for (const match of matches) {
+            console.log(match);
+            console.log(match[0]);
+            console.log(match[1]);
+            console.log(match.index);
+        }*/
+
+        //console.log("START first getting of customerNumber: ");
+        let el = document.getElementById('tt-mdl-layout-title');
+        //console.log("el = ", el);
+
+        let elVal = el.innerHTML;
+        //console.log("elVal = ", elVal);
+
+        let valMatches = elVal.matchAll( customerNoPattern );
+        //console.log("valMatches = ", valMatches);
+
+        let customerNumber = "";
+
+        for (const match of valMatches) {
+            //console.log("match 1: ", match[1]);
+            customerNumber = match[1];
+            //console.log("customernumber: ", match[1]);
+        }
+
+        //console.log("customerNumber = ", customerNumber);
+
+        let newLink = document.createElement( 'a' );
+        newLink.style = cssButton;
+
+        if(customerNumber=="") {
             customerNumber = "";
             buttonText = "";
+            newLink.style = cssHideButton;
         }
+
         newLink.innerHTML = buttonText;
         newLink.href = "https://app.digifix.no/customers/" + customerNumber;
+        console.log("https://app.digifix.no/customers/", customerNumber);
         newLink.id = "dfalink";
-        newLink.style = "color: white; font-size: 14px;     text-transform: uppercase; font-family: roboto; padding: 5px 10px 4px; background-color: var(--tlx-theme-button-color); border-radius: 3px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); display: inline-block; margin-right: 20px;";
         newLink.setAttribute('target', '_blank');
-        customerNameNumber.parentNode.insertBefore( newLink, customerNameNumber.nextSibling );
+        el.parentNode.insertBefore( newLink, el.nextSibling );
     }, 500);
 
     function updateDFAURL() {
         setTimeout(function () {
-            var dfaLink = document.getElementById('dfalink');
-            var numberPattern2 = /\d{5}/g;
-            var customerNameNumber2 = document.getElementById('tt-mdl-layout-title');
-            var customerNumber2 = customerNameNumber2.innerHTML.match( numberPattern2 );
-            if(customerNumber2 == null) {
-                customerNumber2 = "";
+            //ui-id-2customerIdSelect
+            let el = document.getElementById('tt-mdl-layout-title');
+            let elVal = el.innerHTML;
+            let valMatches = elVal.matchAll( customerNoPattern );
+            let customerNumber = "";
+            for (const match of valMatches) {
+                customerNumber = match[1];
+            }
+
+            let dfaLink = document.getElementById('dfalink');
+
+            if(customerNumber == "") {
+                customerNumber = "";
                 dfaLink.innerHTML = "";
+                dfaLink.style = cssHideButton;
             } else {
-                dfaLink.innerHTML = " Åpne kunde i DFA ";
-                dfaLink.href = "https://app.digifix.no/customers/" + customerNumber2;
+                dfaLink.innerHTML = buttonText;
+                dfaLink.href = "https://app.digifix.no/customers/" + customerNumber;
+                dfaLink.style = cssButton;
             }
         }, 500);
     }
