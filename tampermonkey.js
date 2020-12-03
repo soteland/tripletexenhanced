@@ -15,12 +15,14 @@
     const cssHideButton = "display: none;"
     const customerNoPattern = /\((\d{5})\)/g;
     const buttonText = " Åpne kunde i DFA ";
+    let cnr;
 
     history.pushState = ( f => function pushState(){
         var ret = f.apply(this, arguments);
         window.dispatchEvent(new Event('pushState'));
         window.dispatchEvent(new Event('locationchange'));
         updateDFAURL();
+        updateDFAURL2();
         return ret;
     })(history.pushState);
 
@@ -29,6 +31,7 @@
         window.dispatchEvent(new Event('replaceState'));
         window.dispatchEvent(new Event('locationchange'));
         updateDFAURL();
+        updateDFAURL2();
         return ret;
     })(history.replaceState);
 
@@ -38,6 +41,7 @@
 
     window.addEventListener('locationchange', function(){
         updateDFAURL();
+        updateDFAURL2();
     })
 
     setTimeout(function () {
@@ -54,7 +58,6 @@
 
         newLink.innerHTML = buttonText;
         newLink.href = "https://app.digifix.no/customers/" + customerNumber;
-        console.log("https://app.digifix.no/customers/", customerNumber);
         newLink.id = "CRM_URL";
         newLink.setAttribute('target', '_blank');
         el.parentNode.insertBefore( newLink, el.nextSibling );
@@ -73,6 +76,32 @@
             } else {
                 crmURL.innerHTML = buttonText;
                 crmURL.href = "https://app.digifix.no/customers/" + customerNumber;
+                crmURL.style = cssButton;
+            }
+        }, 500);
+    }
+
+    setTimeout(function () {
+        let customerNumber;
+        var x = document.getElementsByClassName("tlxSelectCustomer");
+        let valMatches = x[0].value.matchAll( customerNoPattern );
+
+        for (const match of valMatches) {
+            cnr = match[1];
+        }
+
+        updateDFAURL2();
+    }, 1000);
+
+    function updateDFAURL2() {
+        setTimeout(function () {
+            //Update URL
+            let crmURL = document.getElementById('CRM_URL');
+            if(cnr==""||cnr==undefined||cnr==null) {
+                crmURL.style = cssHideButton;
+            } else {
+                crmURL.innerHTML = buttonText;
+                crmURL.href = "https://app.digifix.no/customers/" + cnr;
                 crmURL.style = cssButton;
             }
         }, 500);
