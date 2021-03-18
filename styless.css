@@ -46,65 +46,19 @@
     content: " (Rediger videre)";
 }
 
-.tlx-space-accounting tr td:nth-of-type(2) {
-    background: rgba(233, 248, 250, 0.5);
+.tlx-space-accounting tr td:nth-of-type(even) {
+    background: rgb(0 0 0 / 0.05)
 }
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(2) {
-  background: rgba(233, 248, 250, 0.7);
-}
-
-.tlx-space-accounting tr td:nth-of-type(3) {
-    background: rgb(255 235 59 / 0.5)
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(3) {
-    background: rgb(255 235 59 / 0.6)
+.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(even) {
+    background: rgb(0 0 0 / 0.1)
 }
 
-.tlx-space-accounting tr td:nth-of-type(4) {
-    background: rgb(255 152 0 / 0.4)
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(4) {
-    background: rgb(255 152 0 / 0.5)
+.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(odd) {
+    background: rgb(0 0 0 / 0.05)
 }
 
-
-.tlx-space-accounting tr td:nth-of-type(5) {
-    background: rgb(255 152 0 / 0.6)
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(5) {
-    background: rgb(255 152 0 /0.7)
-}
-
-.tlx-space-accounting tr td:nth-of-type(6) {
-    background: rgb(244 67 54 / 0.5)
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(6) {
-    background: rgb(244 67 54 / 0.6)
-}
-
-.tlx-space-accounting tr td:nth-of-type(7) {
-    background: rgb(244 67 54 / 0.7);
-  color: white;
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(7) {
-    background: rgb(244 67 54 / 0.8)
-}
-
-.tlx-space-accounting tr td:nth-of-type(8) {
-    background: rgb(244 67 54 / 0.85);
-  color: white;
-}
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(8) {
-    background: rgb(244 67 54 / 0.95)
-}
-
-.tlx-space-accounting tr td:nth-of-type(9) {
-    background: rgb(244 67 54 / 1);
-  color: white;
-}
-
-.tlx-space-accounting table.contentTable:not(.avoidHighlight) tbody tr:not(.table-row--sub-header):hover td:nth-of-type(9) {
-    background: rgb(255 17 0 / 1)
+.tlx-space-accounting tr td:nth-of-type(1) {
+    background: none;
 }
 
 /*
@@ -195,4 +149,3 @@ table.model tr td {
   border-top: 1px solid rgba(0,0,0,0.2);
   padding: 7px!important;
 }
-
